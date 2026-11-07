@@ -1,0 +1,22 @@
+.hero-image-main img,
+.hero-image-small img {
+  transform: scale(1.65);
+}
+
+.product-image-wrap img {
+  transform: scale(1.32);
+}
+
+.product-card:hover .product-image-wrap img {
+  transform: scale(1.38);
+}
+
+.subtotal-row,
+.checkout-summary strong,
+#sort-select option[value^="price-"] {
+  display: none !important;
+}
+
+.checkout-summary {
+  justify-content: flex-start;
+}

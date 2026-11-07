@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7ed">
+  <meta name="description" content="Shop lovingly handmade candles, tealight holders and festive décor from Minee's Crafts. Order directly on WhatsApp.">
+  <title>Minee's Crafts | Little things, made with love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/refinements.css">
+  <script src="/config.js" defer></script>
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <div class="announcement"><span class="announcement-star" aria-hidden="true">✳</span> Little things, made with love <span class="announcement-divider">·</span> Handcrafted in India</div>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Minee's Crafts home"><span class="wordmark-mark" aria-hidden="true">m</span><span class="wordmark-copy"><strong>Minee's Crafts</strong><small>MADE BY HAND, MADE TO KEEP</small></span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="#shop">Shop</a><a href="#story">Our little studio</a></nav>
+    <div class="header-actions"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Find something lovely" aria-label="Search crafts"></label><button class="cart-trigger" id="cart-open" type="button" aria-label="Open shopping bag"><span class="bag-icon" aria-hidden="true">▱</span><span class="cart-label">Bag</span><span class="cart-count" id="cart-count">0</span></button></div>
+  </header>
+  <main id="home">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><span class="eyebrow"><span class="eyebrow-dot"></span> SMALL-BATCH · SOULFUL · ONE OF A KIND</span><h1 id="hero-title">A little more<br><em>lovely</em> in every day.</h1><p>Handmade treasures for warm homes, thoughtful gifting and the moments worth celebrating.</p><a class="button button-dark" href="#shop">Explore the collection <span aria-hidden="true">↘</span></a><div class="hero-note"><span class="hero-note-mark" aria-hidden="true">✳</span><span>Made slowly.<br>Meant to be kept.</span></div></div>
+      <div class="hero-art" aria-label="Handcrafted floral tealight holders"><div class="hero-image hero-image-main"><img id="hero-image" src="" alt="Colourful handmade tealight holders"></div><div class="hero-image hero-image-small"><img id="hero-image-small" src="" alt="Handmade flower candle"></div><span class="hero-stamp">made<br>with care<span>✳</span></span><span class="hero-art-caption">A warm glow, a handmade touch.</span></div>
+      <span class="hero-scribble" aria-hidden="true">✳</span>
+    </section>
+    <section class="shop-section" id="shop">
+      <div class="section-heading"><div><span class="eyebrow">THE HANDMADE EDIT</span><h2>Find your <em>favourite</em></h2></div><p id="result-count" aria-live="polite"></p></div>
+      <div class="shop-toolbar"><div class="category-tabs" id="category-tabs" role="group" aria-label="Filter by category"></div><label class="sort-control"><span>Sort by</span><select id="sort-select" aria-label="Sort products"><option value="featured">Featured</option><option value="name">Name</option></select></label></div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden><span aria-hidden="true">✳</span><h3>No crafts found just yet</h3><p>Try a different search or category.</p><button class="text-button" id="clear-filters" type="button">Clear filters</button></div>
+    </section>
+    <section class="studio-section" id="story"><div class="studio-art"><img id="studio-image" src="" alt="Hand-finished decorative tealight holders arranged together"><span class="studio-art-tag">A handmade<br>kind of happy</span></div><div class="studio-copy"><span class="eyebrow">A NOTE FROM THE STUDIO</span><h2>Not factory-made.<br><em>Heart-made.</em></h2><p>Every piece at Minee's Crafts is made or finished by hand, one at a time. That means tiny details, joyful colour, and a little bit of character in every order.</p><p>Found a colour you love? Many of our pieces can be customised. Add a note in your bag and we'll take it from there.</p><a class="text-link" href="#shop">See what we're making <span aria-hidden="true">→</span></a></div></section>
+    <section class="promise-strip" aria-label="Shop information"><div><span class="promise-icon" aria-hidden="true">✳</span><p><strong>Made by hand</strong><br>Each piece has its own story</p></div><div><span class="promise-icon" aria-hidden="true">♡</span><p><strong>Made for you</strong><br>Ask us about custom colours</p></div><div><span class="promise-icon" aria-hidden="true">↗</span><p><strong>Order personally</strong><br>Confirm your order on WhatsApp</p></div></section>
+  </main>
+  <footer class="site-footer"><a class="footer-brand" href="#home">Minee's Crafts<span>✳</span></a><p>Handmade with a little extra heart.</p><a class="footer-top" href="#home">Back to top ↑</a><small>© <span id="year"></span> Minee's Crafts</small></footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-modal="true" role="dialog" aria-hidden="true"><div class="drawer-header"><div><span class="eyebrow">YOUR HANDPICKED FINDS</span><h2 id="cart-title">Your bag <span id="drawer-item-count"></span></h2></div><button class="icon-button" id="cart-close" type="button" aria-label="Close bag">×</button></div><div class="cart-items" id="cart-items"></div><div class="cart-empty" id="cart-empty"><span aria-hidden="true">♡</span><p>Your bag is waiting for something lovely.</p><button class="text-link" id="continue-shopping" type="button">Explore the collection →</button></div><div class="drawer-footer" id="drawer-footer"><div class="subtotal-row"><span>Items subtotal</span><strong id="cart-subtotal">₹0</strong></div><p class="delivery-note" id="delivery-note"></p><button class="button button-coral checkout-button" id="checkout-open" type="button">Continue to delivery details <span aria-hidden="true">→</span></button><button class="text-button clear-cart" id="cart-clear" type="button">Clear bag</button></div></aside>
+
+  <div class="modal-backdrop" id="checkout-backdrop" hidden></div>
+  <section class="checkout-modal" id="checkout-modal" aria-labelledby="checkout-title" aria-modal="true" role="dialog" aria-hidden="true"><div class="checkout-header"><div><span class="eyebrow">ALMOST YOURS</span><h2 id="checkout-title">Delivery details</h2><p>We'll open WhatsApp with your order ready to send.</p></div><button class="icon-button" id="checkout-close" type="button" aria-label="Close checkout">×</button></div><form id="checkout-form"><div class="form-grid"><label class="field"><span>Your name *</span><input name="name" autocomplete="name" required maxlength="80" placeholder="Name for the order"></label><label class="field"><span>WhatsApp / phone *</span><input name="phone" type="tel" autocomplete="tel" required maxlength="30" placeholder="Your contact number"></label><label class="field field-wide"><span>Delivery address *</span><textarea name="address" autocomplete="street-address" required maxlength="500" rows="3" placeholder="House / street, area, city, PIN code"></textarea></label><label class="field"><span>Preferred delivery date</span><input name="date" type="date"></label><label class="field"><span>Anything else?</span><input name="deliveryNote" maxlength="180" placeholder="Landmark or delivery note"></label></div><div class="checkout-summary"><span id="checkout-summary-count">0 items</span><strong id="checkout-summary-total">₹0</strong></div><p class="checkout-disclaimer">Delivery charges and payment details will be confirmed with you on WhatsApp.</p><button class="button button-coral checkout-submit" type="submit">Place order on WhatsApp <span aria-hidden="true">↗</span></button></form></section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
